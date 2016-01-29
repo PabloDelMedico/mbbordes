@@ -498,6 +498,7 @@ figure figcaption p {
   background: #fff;
   padding: 25px 0;
   color: #555;
+  border-top: 1px solid #02bdd5;
 }
 #footer .copyright {
   font-size: 13px;
