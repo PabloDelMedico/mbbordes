@@ -181,11 +181,11 @@ a:hover {
   margin-top: 25px;
 }
 #hero-area .btn {
-  background: #414141;
+  background: #02bdd5;
   border: none;
   color: #fff;
   padding: 20px 35px;
-  margin-top: 30px;
+  margin-top: 40px;
   font-size: 16px;
   font-size: 13px;
   line-height: 1em;
@@ -419,7 +419,7 @@ figure figcaption p {
   padding: 90px 0;
 }
 #contact-section .contact-form {
-  margin-top: 42px;
+  margin-top: 20px;
 }
 #contact-section .contact-form .btn-send {
   margin-top: 35px;
