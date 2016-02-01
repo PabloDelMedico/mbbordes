@@ -1,5 +1,5 @@
 <?php
 $return = new stdClass();
-$return->success = false;
+$return->success = true;
 
 echo json_encode($return);
