@@ -16,16 +16,18 @@ app.controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
             method: "POST",
             data: $scope.formData
         }).success(function(data, status, headers, config) {
-            if (data.success===true) {
-                $scope.submitAnswer = data;
+            if (data.success === true) {
+                $scope.submitAnswer = 'Su mensaje ha sido enviado. Gracias.';
                 $scope.alertClass = 'alert alert-success';
                 $scope.formData = {};
-            }else {
-                $scope.submitAnswer = data;
+            } else {
+                $scope.submitAnswer = "Sorry " + $scope.formData.name + ", it seems that my mail server is not responding. Please try again later!";
+                $scope.submitAnswer += data.message;
                 $scope.alertClass = 'alert alert-danger';
             }
         }).error(function(data, status, headers, config) {
-            $scope.submitAnswer = data;
+            $scope.submitAnswer = "Sorry " + $scope.formData.name + ", it seems that my mail server is not responding. Please try again later!";
+            $scope.submitAnswer += data.message;
             $scope.alertClass = 'alert alert-danger';
         });
 
