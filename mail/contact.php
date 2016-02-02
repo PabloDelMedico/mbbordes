@@ -31,9 +31,9 @@ $mail = new PHPMailer();
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
+//$mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'mail.wiphalasistemas.com.ar';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
+//$mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'a5000515';                 // SMTP username
 $mail->Password = '44nozuZEre';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
