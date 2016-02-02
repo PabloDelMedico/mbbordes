@@ -182,14 +182,20 @@
                         <h2 class="subtitle">Contacto</h2>
 
                         <div class="contact-form">
-                            <form id="contact-form" role="form" ng-submit="submitForm()">
+                            <form id="contact-form" role="form" ng-submit="contactForm.$valid && submitForm()" name="contactForm" novalidate>
 
                                 <div class="form-group">
-                                    <input type="text" placeholder="Nombre" class="form-control" name="name" id="name" ng-model="formData.name">
+                                    <input type="text" placeholder="Nombre" class="form-control" name="name" id="name" ng-model="formData.name" required>
+                                    <div ng-show="contactForm.$submitted">
+                                        <div ng-show="contactForm.name.$error.required">Ingrese su nombre</div>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="email" placeholder="Email" class="form-control" name="email" id="email" ng-model="formData.email">
+                                    <input type="email" placeholder="Email" class="form-control" name="email" id="email" ng-model="formData.email" required>
+                                    <div ng-show="contactForm.$submitted">
+                                        <div ng-show="contactForm.email.$error.required">Ingrese su email</div>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
@@ -201,7 +207,10 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea rows="8" placeholder="Mensaje" class="form-control" name="message" id="message" ng-model="formData.message"></textarea>
+                                    <textarea rows="8" placeholder="Mensaje" class="form-control" name="message" id="message" ng-model="formData.message" required></textarea>
+                                    <div ng-show="contactForm.$submitted">
+                                        <div ng-show="contactForm.message.$error.required">Ingrese su consulta</div>
+                                    </div>
                                 </div>
 
 
